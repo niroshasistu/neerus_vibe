@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neerus Vibes</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    .navbar-bg {
+      background-image: url("header.jpeg.jpg");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 15px 50px;
+    }
+
+
+    .navbar-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .navbar-bg * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: white;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #570ad4cb;
+    }
+
+    /* Common card image sizing */
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* Event & Service cards equal height */
+    .card {
+      height: 100%;
+    }
+
+    /* Gallery images uniform size */
+    .gallery-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    /* Service icon cards alignment */
+    .service-card {
+      height: 100%;
+    }
+
+    /* Smooth hover effect */
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s ease;
+    }
+
+    /* Search Button */
+    .btn-outline-light:hover {
+      background-color: #570ad4cb;
+      color: black;
+      border-color: #570ad4cb;
+    }
+
+    /* MEDIA QUERIES FOR SMALL SCREENS */
+    @media (max-width: 992px) {
+
+      /* Hero section adjustments */
+      section.bg-dark.text-white.position-relative h1 {
+        font-size: 2.5rem;
+      }
+
+      section.bg-dark.text-white.position-relative p.lead {
+        font-size: 1rem;
+      }
+
+      /* Hero buttons stacking */
+      section.bg-dark.text-white.position-relative .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      /* About Us stats */
+      .row.mt-4 .col-6 {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      /* Navbar padding adjustment */
+      .navbar-bg {
+        padding: 10px 20px;
+      }
+
+      /* Cards text size */
+      .card-body h5 {
+        font-size: 1.1rem;
+      }
+
+      .card-body p {
+        font-size: 0.9rem;
+      }
+
+      /* Gallery images height smaller */
+      .gallery-img {
+        height: 180px;
+      }
+
+      /* Contact form input and textarea */
+      form input,
+      form textarea {
+        font-size: 0.9rem;
+      }
+
+      /* Footer spacing */
+      footer .col-lg-4,
+      footer .col-lg-3,
+      footer .col-lg-2 {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+
+      /* Hero text further smaller */
+      section.bg-dark.text-white.position-relative h1 {
+        font-size: 2rem;
+      }
+
+      section.bg-dark.text-white.position-relative p.lead {
+        font-size: 0.9rem;
+      }
+
+      /* Cards text and button smaller */
+      .card-body h5 {
+        font-size: 1rem;
+      }
+
+      .card-body p {
+        font-size: 0.85rem;
+      }
+
+      .card-body .btn {
+        font-size: 0.9rem;
+      }
+
+      /* Footer social icons smaller */
+      footer .fs-4 {
+        font-size: 1.2rem;
+      }
+    }
+
+    .btn-warning,
+    .btn-outline-warning {
+      background-color: #6f2cff;
+      border-color: #6f2cff;
+      color: #ffffff;
+
+    }
+
+    .btn-warning:hover,
+    .btn-warning:active,
+    .btn-outline-warning:hover,
+    .btn-outline-warning:active {
+      background-color: #ffffff;
+      color: #6f2cff;
+      border-color: #6f2cff;
+    }
+
+    .btn {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-bg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://i.pinimg.com/originals/06/d9/93/06d99380b283229070722be8d610f434.png" alt="Logo" width="40"
+          height="30" class="me-2" />
+        Neerus Vibes
+      </a>
+
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="bg-dark text-white position-relative">
+    <img
+      src="https://images.unsplash.com/photo-1653821355736-0c2598d0a63e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnQlMjBkZWNvcmF0aW9ufGVufDB8fDB8fHww"
+      class="img-fluid w-100" style="height: 90vh; object-fit: cover" alt="Hero Image" />
+
+   
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+
+    
+    <div class="container position-absolute top-50 start-50 translate-middle text-center">
+      <h1 class="display-4 fw-bold">Celebrate Every Moment</h1>
+      <p class="lead mt-3">
+        Birthdays • Weddings • Decorations • Catering • Events
+      </p>
+
+      <div class="mt-4">
+        <a href="#events" class="btn btn-warning btn-lg me-3">Explore Events</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="decor.jpg" class="img-fluid rounded-4 shadow" alt="About Neerus Vibes" />
+        </div>
+
+        <div class="col-lg-6">
+          <h6 class="text-warning fw-semibold">ABOUT US</h6>
+          <h2 class="fw-bold mb-3">Creating Unforgettable Celebrations</h2>
+          <p class="text-muted">
+            Neerus Vibes is a creative event management brand dedicated to
+            transforming your special moments into memorable experiences. From
+            elegant decorations to delightful catering and seamless event
+            planning, we bring your celebrations to life with style and
+            passion.
+          </p>
+
+          <p class="text-muted">
+            Whether it’s a birthday party, wedding, corporate event, or
+            festive gathering, our expert team ensures perfection in every
+            detail, so you can relax and enjoy the moment.
+          </p>
+
+          <div class="row mt-4">
+            <div class="col-6 mb-3">
+              <h4 class="fw-bold text-warning">500+</h4>
+              <p class="mb-0 text-muted">Happy Celebrations</p>
+            </div>
+            <div class="col-6 mb-3">
+              <h4 class="fw-bold text-warning">50+</h4>
+              <p class="mb-0 text-muted">Event Themes</p>
+            </div>
+            <div class="col-6">
+              <h4 class="fw-bold text-warning">10+</h4>
+              <p class="mb-0 text-muted">Years of Experience</p>
+            </div>
+            <div class="col-6">
+              <h4 class="fw-bold text-warning">100%</h4>
+              <p class="mb-0 text-muted">Client Satisfaction</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-warning btn-lg mt-4">Know More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h6 class="text-warning fw-semibold">OUR EVENTS</h6>
+        <h2 class="fw-bold">Moments We Create</h2>
+        <p class="text-muted mt-2">
+          We specialize in crafting unforgettable experiences for every
+          occasion.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100">
+            <img src="birthday (2).jpg" class="card-img-top" alt="Birthday Events" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Birthday Celebrations</h5>
+              <p class="card-text text-muted">
+                Fun-filled birthday parties with creative themes, décor, and
+                joyful moments.
+              </p>
+              <a href="#contact" class="btn btn-outline-warning">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTaAV5WNvwH5bE5xKmNLCCLf5lELWy9eMfg&s"
+              class="card-img-top" alt="Wedding Events" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Wedding Events</h5>
+              <p class="card-text text-muted">
+                Elegant wedding setups with stunning décor and flawless
+                execution.
+              </p>
+              <a href="#contact" class="btn btn-outline-warning">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100">
+            <img src="https://www.shutterstock.com/image-photo/catering-tabel-party-food-decoration-600w-1506606497.jpg"
+              class="card-img-top" alt="Catering Services" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Catering Services</h5>
+              <p class="card-text text-muted">
+                Delicious food experiences customized to match your event
+                style.
+              </p>
+              <a href="#contact" class="btn btn-outline-warning">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK0dsPUbM3HZY7i17HDXBHIMEkIrDqLAo1Vw&s"
+              class="card-img-top" alt="Decoration Services" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Event Decorations</h5>
+              <p class="card-text text-muted">
+                Creative and elegant decoration themes designed to impress.
+              </p>
+              <a href="#contact" class="btn btn-outline-warning">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100">
+            <img
+              src="https://www.shutterstock.com/image-photo/corporate-event-celebration-restaurant-hall-600nw-1561843807.jpg"
+              class="card-img-top" alt="Corporate Events" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Corporate Events</h5>
+              <p class="card-text text-muted">
+                Professional event management for meetings and corporate
+                gatherings.
+              </p>
+              <a href="#contact" class="btn btn-outline-warning">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100">
+            <img
+              src="https://media.designcafe.com/wp-content/uploads/2020/09/21140648/festival-decoration-ideas-at-home.jpg"
+              class="card-img-top" alt="Festive Events" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Festive Celebrations</h5>
+              <p class="card-text text-muted">
+                Festival and cultural celebrations filled with colors and joy.
+              </p>
+              <a href="#contact" class="btn btn-outline-warning">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h6 class="text-warning fw-semibold">GALLERY</h6>
+        <h2 class="fw-bold">Our Beautiful Moments</h2>
+        <p class="text-muted mt-2">
+          A glimpse of the celebrations and memories we create.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="https://www.partyone.in/suploads/2024/Jun/26/38857/1719365590IMG_E7413.webp"
+            class="img-fluid rounded-4 shadow gallery-img" alt="" />
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <img src="https://thumbs.dreamstime.com/b/wedding-table-set-dining-35069221.jpg"
+            class="img-fluid rounded-4 shadow gallery-img" alt="" />
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5a71dc8cfe54ef2450030e99/1520532083746-197QVZDKFGS4T7EWICCH/_MG_1019.jpg?format=2500w"
+            class="img-fluid rounded-4 shadow gallery-img" alt="" />
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUVjl8sqezzhhGdwG6ewro9xml8MspPiTHjc-vcuqbxLU2-ExMFmH9K7USeeRcj7Ewkqs&usqp=CAU"
+            class="img-fluid rounded-4 shadow gallery-img" alt="" />
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe5fejHqZrJR8SUk_yzELypq-490f_7FX5LA&s"
+            class="img-fluid rounded-4 shadow gallery-img" alt="" />
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <img src="https://cdn.balloondekor.com/14/1754654605910.webp" class="img-fluid rounded-4 shadow gallery-img"
+            alt="" />
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-warning btn-lg">View More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h6 class="text-warning fw-semibold">OUR SERVICES</h6>
+        <h2 class="fw-bold">What We Offer</h2>
+        <p class="text-muted mt-2">
+          Complete event solutions designed to make your celebrations
+          effortless and memorable.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="fs-1 text-warning">🎉</span>
+              </div>
+              <h5 class="fw-bold">Event Planning</h5>
+              <p class="text-muted">
+                End-to-end planning and coordination for flawless event
+                execution.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="fs-1 text-warning">🎨</span>
+              </div>
+              <h5 class="fw-bold">Theme Decoration</h5>
+              <p class="text-muted">
+                Creative and customized décor themes to match your vision.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="fs-1 text-warning">🍽️</span>
+              </div>
+              <h5 class="fw-bold">Catering Services</h5>
+              <p class="text-muted">
+                Delicious menus crafted to delight your guests.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="fs-1 text-warning">🎶</span>
+              </div>
+              <h5 class="fw-bold">Music & Entertainment</h5>
+              <p class="text-muted">
+                DJs, live music, and entertainment to energize your event.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="fs-1 text-warning">📸</span>
+              </div>
+              <h5 class="fw-bold">Photography & Video</h5>
+              <p class="text-muted">
+                Capturing your special moments with professional quality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card border-0 shadow h-100 text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                <span class="fs-1 text-warning">✨</span>
+              </div>
+              <h5 class="fw-bold">Special Effects</h5>
+              <p class="text-muted">
+                Lighting, smoke, and visual effects to elevate the experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h6 class="text-warning fw-semibold">CONTACT US</h6>
+        <h2 class="fw-bold">Get In Touch</h2>
+        <p class="text-muted mt-2">
+          Let’s plan your next celebration together.
+        </p>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <div class="p-4 bg-white rounded-4 shadow">
+            <h5 class="fw-bold mb-4">Contact Information</h5>
+
+            <p class="mb-3">
+              <span class="fw-semibold text-warning">📍 Address:</span><br />
+              Neerus Vibes, Hyderabad, India
+            </p>
+
+            <p class="mb-3">
+              <span class="fw-semibold text-warning">📞 Phone:</span><br />
+              +91 98765 43210
+            </p>
+
+            <p class="mb-3">
+              <span class="fw-semibold text-warning">✉️ Email:</span><br />
+              neerusvibes@gmail.com
+            </p>
+
+            <p class="mb-0">
+              <span class="fw-semibold text-warning">⏰ Working Hours:</span><br />
+              Mon – Sun: 9:00 AM – 9:00 PM
+            </p>
+          </div>                                                                                                                                                                                                                                                                                                                                                                            
+        </div>
+
+        <div class="col-lg-7">
+          <div class="p-4 bg-white rounded-4 shadow">
+            <h5 class="fw-bold mb-4">Send Us a Message</h5>
+
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Your Name" required />
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Your Email" required />
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" placeholder="Subject" />
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-warning btn-lg w-100">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h4 class="fw-bold">Neerus Vibes</h4>
+          <p class="text-secondary mt-3">
+            Creating unforgettable celebrations with elegant décor, delicious
+            food, and seamless event planning.
+          </p>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-semibold">Quick Links</h5>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none">Home</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none">About</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none">Events</a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="text-secondary text-decoration-none">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-semibold">Services</h5>
+          <ul class="list-unstyled mt-3 text-secondary">
+            <li class="mb-2">Event Planning</li>
+            <li class="mb-2">Theme Decoration</li>
+            <li class="mb-2">Catering Services</li>
+            <li class="mb-2">Photography</li>
+            <li>Entertainment</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-semibold">Follow Us</h5>
+          <div class="mt-3">
+            <a href="#" class="text-white fs-4 me-3 text-decoration-none">🌐</a>
+            <a href="#" class="text-white fs-4 me-3 text-decoration-none">📸</a>
+            <a href="#" class="text-white fs-4 me-3 text-decoration-none">📘</a>
+            <a href="#" class="text-white fs-4 text-decoration-none">🐦</a>
+          </div>
+          <p class="text-secondary mt-3">
+            Stay connected for updates and offers.
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4" />
+
+      <div class="text-center pb-3">
+        <p class="mb-0 text-secondary">
+          © 2025 Neerus Vibes. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

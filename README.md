@@ -1,1 +1,2 @@
-# neerus_vibe
+# event_manager
+https://niroshasistu.github.io/Event_Management/
