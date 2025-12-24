@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Memories Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .navbar-bg {
+            color: linear-gradient(#654ea3, #eaafc8);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 15px 50px;
+        }
+
+
+        .navbar-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .navbar-bg * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #570ad4cb;
+        }
+
+
+        .sticky-gallery {
+            background: linear-gradient(135deg, #f7f2ff, #eee5ff);
+        }
+
+
+        .sticky-title {
+            color: #6f42c1;
+            font-size: 2.6rem;
+        }
+
+        .sticky-sub {
+            color: #7d6bb3;
+            font-size: 1rem;
+        }
+
+
+        .sticky-note {
+            background: linear-gradient(135deg, #d6c7ff, #f4efff);
+            padding: 15px;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(111, 66, 193, 0.35);
+            position: relative;
+            transition: all 0.45s ease;
+            cursor: pointer;
+        }
+
+
+        .sticky-note::before {
+            content: "📌";
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 22px;
+        }
+
+
+        .sticky-note img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .sticky-note p {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #4b2a91;
+            text-align: center;
+        }
+
+
+        .sticky-note:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 30px 65px rgba(111, 66, 193, 0.55);
+        }
+
+        .rotate-1 {
+            transform: rotate(-2deg);
+        }
+
+        .rotate-2 {
+            transform: rotate(2deg);
+        }
+
+        .rotate-3 {
+            transform: rotate(-1deg);
+        }
+
+
+        @media (max-width: 768px) {
+            .sticky-title {
+                font-size: 2rem;
+            }
+
+            .sticky-note img {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-bg">
+        <div class="container-fluid navbar-bg">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://i.pinimg.com/originals/06/d9/93/06d99380b283229070722be8d610f434.png" alt="Logo"
+                    width="40" height="30" class="me-2" />
+                Neerus Vibes
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navbar-bg" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" />
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="sticky-gallery py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold sticky-title">Our Memory Wall</h2>
+                <p class="sticky-sub">Little moments, big memories 💜</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="wedding.jpg">
+                        <p>Wedding Bliss</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-2">
+                        <img src="birthday12.jpg">
+                        <p>Birthday Bash</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-3">
+                        <img src="">
+                        <p>Engagement Day</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="festive.jpg">
+                        <p>Festive Decor</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-2">
+                        <img src="te.jpg">
+                        <p>Corporate Event</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-3">
+                        <img src="catering.jpg">
+                        <p>Catering Setup</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="stage.jpg">
+                        <p>Stage Decoration</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-2">
+                        <img src="haldi.jpg">
+                        <p>Haldi Ceremony</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-3">
+                        <img src="night party.jpg">
+                        <p>Night Party</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="grandcelebration.jpg">
+                        <p>Grand Celebration</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="fw-bold">Neerus Vibes</h4>
+                    <p class="text-secondary mt-3">
+                        Creating unforgettable celebrations with elegant décor, delicious
+                        food, and seamless event planning.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-semibold">Quick Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">Home</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">About</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">Events</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary text-decoration-none">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-secondary text-decoration-none">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-semibold">Services</h5>
+                    <ul class="list-unstyled mt-3 text-secondary">
+                        <li class="mb-2">Event Planning</li>
+                        <li class="mb-2">Theme Decoration</li>
+                        <li class="mb-2">Catering Services</li>
+                        <li class="mb-2">Photography</li>
+                        <li>Entertainment</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-semibold">Follow Us</h5>
+                    <div class="mt-3">
+                        <a href="#" class="text-white fs-4 me-3 text-decoration-none">🌐</a>
+                        <a href="#" class="text-white fs-4 me-3 text-decoration-none">📸</a>
+                        <a href="#" class="text-white fs-4 me-3 text-decoration-none">📘</a>
+                        <a href="#" class="text-white fs-4 text-decoration-none">🐦</a>
+                    </div>
+                    <p class="text-secondary mt-3">
+                        Stay connected for updates and offers.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4" />
+
+            <div class="text-center pb-3">
+                <p class="mb-0 text-secondary">
+                    © 2025 Neerus Vibes. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
